@@ -27,6 +27,20 @@ namespace PersonWebApp.Controllers
                           Problem("Entity set 'ApplicationDbContext.Person'  is null.");
         }
 
+        // GET: People/ShowSearchForm
+        public async Task<IActionResult> ShowSearchForm()
+        {
+            return View();
+                        
+        }
+
+        // POST: People/ShowSearchResults
+        public async Task<IActionResult> ShowSearchResults(String SearchName)
+        {
+            return View("Index", await _context.Person.Where(p => p.Name.Contains(SearchName)).ToListAsync());
+                       
+        }
+
         // GET: People/Details/5
         public async Task<IActionResult> Details(int? id)
         {
