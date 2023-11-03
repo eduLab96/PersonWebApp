@@ -40,7 +40,7 @@ namespace PersonWebApp.Controllers
 
 
         // POST: People/ShowSearchResults
-        public async Task<IActionResult> ShowSearchPhoneResults(String SearchName, int SearchPhone)
+        public async Task<IActionResult> ShowSearchResults(String SearchName, int SearchPhone)
         {
             return View("Index", await _context.Person.Where(p => (p.Name.Contains(SearchName)) | (p.Phone.Equals(SearchPhone))  ).ToListAsync());
         }
