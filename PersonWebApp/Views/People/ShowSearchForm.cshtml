@@ -2,15 +2,21 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="ShowSearchResults">         
+     
+        <form asp-action="ShowSearchPhoneResults">
             <div class="form-group">
-                <label for="SearchName" class="control-label">Search Name</label>
-                <input name="SearchName" class="form-control" />               
+                <label for="SearchName" class="control-label">Name</label>
+                <input name="SearchName" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="SearchPhone" class="control-label">Phone</label>
+                <input name="SearchPhone" class="form-control" />
             </div>
             <div class="form-group">
                 <input type="submit" value="Search" class="btn btn-primary" />
             </div>
         </form>
+
     </div>
 </div>
 
